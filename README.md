@@ -27,12 +27,14 @@ Notes:
 ## App Configuration
 
 **Application Behavior Configuration**
+
 The following settings can be adjusted in `/src/config/index.ts` to control how the application processes messages:
 - `batches.maxSize`: Maximum number of messages that can be accumulated in the batch before messages are processed.
 - `batches.flushIntervalMs`: Time interval (in milliseconds) in which messages in the batch are processed.
 - `maxRetries`: Maximum number of retries before a failed message is sent to a dead-letter queue (DLQ).
 
 **Environment Variables**
+
 Environment variables used to configure external services in `.env.example`:
 - RABBITMQ_URL: URL for the RabbitMQ server.
 - RABBITMQ_ORDER_QUEUE: Name of the RabbitMQ queue for order events.
