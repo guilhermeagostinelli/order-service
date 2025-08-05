@@ -36,11 +36,11 @@ The following settings can be adjusted in `/src/config/index.ts` to control how 
 **Environment Variables**
 
 Environment variables used to configure external services in `.env.example`:
-- RABBITMQ_URL: URL for the RabbitMQ server.
-- RABBITMQ_ORDER_QUEUE: Name of the RabbitMQ queue for order events.
-- RABBITMQ_CRM_QUEUE: Name of the RabbitMQ queue for CRM events.
-- RABBITMQ_CRM_DEAD_LETTER_QUEUE: Name of the RabbitMQ dead-letter queue for CRM events.
-- DATABASE_URL: Connection string for the PostgreSQL database.
+- `RABBITMQ_URL`: URL for the RabbitMQ server.
+- `RABBITMQ_ORDER_QUEUE`: Name of the RabbitMQ queue for order events.
+- `RABBITMQ_CRM_QUEUE`: Name of the RabbitMQ queue for CRM events.
+- `RABBITMQ_CRM_DEAD_LETTER_QUEUE`: Name of the RabbitMQ dead-letter queue for CRM events.
+- `DATABASE_URL`: Connection string for the PostgreSQL database.
 
 ## Getting Started
 
