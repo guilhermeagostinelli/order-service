@@ -73,9 +73,11 @@ Environment variables used to configure external services in `.env.example`:
 4. Scroll down to the "Publish message" section.
 5. In the "Payload" field, enter a JSON message (see examples below) and click on "Publish message".
 
-  The following JSON messages can be published to the order.queue:
+    The following JSON messages can be published to the order.queue:
+
     For Order Created event:
-    ```json
+
+    ```
     {
       "type": "order.created",
       "payload": {
@@ -86,7 +88,8 @@ Environment variables used to configure external services in `.env.example`:
     ```
 
     For Order Cancelled event:
-    ```json
+
+    ```
     {
       "type": "order.cancelled",
       "payload": {
