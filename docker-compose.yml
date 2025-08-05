@@ -1,0 +1,33 @@
+services:
+  app:
+    build: .
+    container_name: order-service
+    depends_on:
+      - rabbitmq
+      - postgres
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.example
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: orders
+    volumes:
+      - ./database-init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
